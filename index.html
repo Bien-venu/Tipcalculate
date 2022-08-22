@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="calculate">
+      <div class="center">
+        <div class="input">
+          <div>
+            <span>Bill total</span>
+            <div class="in">
+              <span>$</span>
+              <input
+                id="inbill"
+                onkeyup="calculateBill"
+                type="text"
+                placeholder="0.00"
+              />
+            </div>
+          </div>
+          <div>
+            <span>Tip</span>
+            <div class="in">
+              <span>%</span>
+              <input
+                type="text"
+                id="tipInput"
+                onkeyup="calculateBill"
+                placeholder="10"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="last">
+          <div>
+            <span>People</span>
+            <div>
+              <button class="splitButton" onclick="increasePeople">
+                <span class="buttonText">+</span>
+              </button>
+              <span id="numberofPeople">1</span>
+              <button class="splitButton" onclick="decreasePeople">
+                <span class="buttonText">-</span>
+              </button>
+            </div>
+          </div>
+          <div class="total">
+            <div>Total per Person</div>
+            <div id="perPersonTotal" class="die">$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
