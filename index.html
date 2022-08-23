@@ -17,7 +17,7 @@
               <span>$</span>
               <input
                 id="inbill"
-                onkeyup="calculateBill"
+                onkeyup="calculateBill()"
                 type="text"
                 placeholder="0.00"
               />
@@ -30,7 +30,7 @@
               <input
                 type="text"
                 id="tipInput"
-                onkeyup="calculateBill"
+                onkeyup="calculateBill()"
                 placeholder="10"
               />
             </div>
@@ -40,18 +40,18 @@
           <div>
             <span>People</span>
             <div>
-              <button class="splitButton" onclick="increasePeople">
+              <button class="splitButton" onclick="increasePeople()">
                 <span class="buttonText">+</span>
               </button>
-              <span id="numberofPeople">1</span>
-              <button class="splitButton" onclick="decreasePeople">
+              <div id="numberofPeople"><span class="wane">1</span></div>
+              <button class="splitButton" onclick="decreasePeople()">
                 <span class="buttonText">-</span>
               </button>
             </div>
           </div>
           <div class="total">
             <div>Total per Person</div>
-            <div id="perPersonTotal" class="die">$</div>
+            <div  class="die">$<span id="perPersonTotal">0.00</span></div>
           </div>
         </div>
       </div>
